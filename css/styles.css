@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  background-color: rgb(221, 0, 0);
+}
+.wrapper aside {
+  padding: 2px;
+  padding-right: 0;
+  color: white;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.wrapper aside .texto-footer {
+  color: rgb(40, 3, 61);
+  font-size: 0.85rem;
+}
+.wrapper aside .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-left: 40px;
+}
+.wrapper aside .menu .boton-carrito {
+  margin-top: 30px;
+}
+.wrapper aside .menu .boton-carrito a {
+  color: white;
+}
+.wrapper aside .menu .boton-menu {
+  background-color: transparent;
+  border: 0;
+  color: white;
+  font-size: 1rem;
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  cursor: pointer;
+  position: relative;
+}
+.wrapper aside .menu .boton-menu .bi-hand-index-fill, .wrapper aside .menu .boton-menu .bi-hand-index {
+  transform: rotateZ(90deg);
+}
+.wrapper aside .menu .active {
+  background-color: white;
+  color: rgb(221, 0, 0);
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.wrapper aside .menu .active a {
+  color: rgb(221, 0, 0);
+}
+.wrapper aside .menu .active::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 20px;
+  bottom: 100%;
+  right: 0;
+  background-color: transparent;
+  border-bottom-right-radius: 0.5rem;
+  box-shadow: 0 1rem 0 white;
+}
+.wrapper aside .menu .active::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 20px;
+  top: 100%;
+  right: 0;
+  background-color: transparent;
+  border-top-right-radius: 0.5rem;
+  box-shadow: 0 -1rem 0 white;
+}
+.wrapper .logo {
+  font-weight: 400;
+  font-size: 30px;
+}
+.wrapper main {
+  background-color: white;
+  margin: 1rem;
+  margin-left: 0;
+  border-radius: 2rem;
+  padding: 30px;
+}
+.wrapper main .titulo-princpal {
+  color: rgb(138, 0, 156);
+}
+.wrapper main .contenedor-productos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+}
+.wrapper main .contenedor-productos .producto .producto-imagen {
+  width: 150px;
+  display: flex;
+  text-align: center;
+  height: 200px;
+  margin-left: 50px;
+  max-width: 100%;
+  border-radius: 1rem;
+  background-color: rgba(128, 128, 128, 0.075);
+}
+.wrapper main .contenedor-productos .producto .producto-detalles {
+  background-color: rgb(221, 0, 0);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 4px;
+  padding: 0.5rem;
+  height: 120px;
+  text-align: center;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 15px;
+}
+.wrapper main .contenedor-productos .producto .producto-detalles .producto-titulo {
+  font-size: 15px;
+}
+.wrapper main .contenedor-productos .producto .producto-agregar {
+  border: 0;
+  background-color: white;
+  color: black;
+  padding: 0.5rem;
+  text-transform: uppercase;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 2px solid white;
+  transition: 0.2s;
+  font-size: 15px;
+}
+.wrapper main .contenedor-productos .producto .producto-agregar:hover {
+  background-color: rgb(221, 0, 0);
+  color: white;
+}
+
+.menu .boton-volver a {
+  color: white;
+}
+.menu .numerito {
+  background-color: white;
+  color: rgb(221, 0, 0);
+  padding: 0 0.25rem;
+  border-radius: 0.25rem;
+}
+
+.carrito-productos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.carrito-productos .carrito-producto {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(209, 203, 203, 0.164);
+  color: rgb(221, 0, 0);
+  height: 80px;
+  border-radius: 20px;
+}
+.carrito-productos .carrito-producto .carrito-producto-eliminar {
+  background-color: transparent;
+  border: 0;
+  margin-right: 20px;
+  color: rgb(126, 4, 4);
+}
+.carrito-productos .carrito-imagen {
+  width: 4rem;
+  border-radius: 1rem;
+}
+
+.carrito-acciones {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.carrito-acciones .carrito-acciones-izquierda .carrito-acciones-vaciar {
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid black;
+  transition: 1s;
+  color: rgb(221, 0, 0);
+  text-transform: uppercase;
+}
+.carrito-acciones .carrito-acciones-izquierda .carrito-acciones-vaciar:hover {
+  background-color: rgb(221, 0, 0);
+  color: white;
+}
+.carrito-acciones .carrito-acciones-derecha {
+  display: flex;
+}
+.carrito-acciones .carrito-acciones-derecha .carrito-acciones-total {
+  font-size: 20px;
+  display: flex;
+  border: 1px solid black;
+  background-color: rgba(209, 203, 203, 0.164);
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  gap: 10px;
+  padding: 10px;
+  text-align: center;
+  width: 200px;
+}
+.carrito-acciones .carrito-acciones-derecha .carrito-acciones-comprar {
+  background-color: rgb(221, 0, 0);
+  border: 1px solid black;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  color: white;
+  font-size: 1rem;
+  gap: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 1s;
+  text-transform: uppercase;
+}
+.carrito-acciones .carrito-acciones-derecha .carrito-acciones-comprar:hover {
+  background-color: white;
+  color: rgb(221, 0, 0);
+}
+
+.disabled {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, input, textarea, ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  list-style: none;
+}
+
+/*# sourceMappingURL=styles.css.map */

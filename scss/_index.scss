@@ -1,0 +1,146 @@
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    background-color: rgb(221, 0, 0);
+    aside{
+        padding: 2px;
+        padding-right: 0;
+        color: white;
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .texto-footer{
+            color: rgb(40, 3, 61);
+            font-size: .85rem;
+        }
+        .menu{
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            margin-left: 40px;
+            .boton-carrito{
+                margin-top: 30px;
+                a{
+                    color: white;
+                }
+            }
+            .boton-menu{
+                background-color: transparent;
+                border: 0;
+                color: white;
+                font-size: 1rem;
+                display: flex;
+                gap: 10px;
+                padding: 20px;
+                cursor: pointer;
+                .bi-hand-index-fill, .bi-hand-index{
+                    transform: rotateZ(90deg);
+                }
+                position: relative;
+            }
+            .active{
+                background-color: white;
+                color: rgb(221, 0, 0);
+                width: 100%;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+                a{
+                    color:rgb(221, 0, 0)
+                }
+                
+            }
+            .active::before{
+                content: '';
+                position: absolute;
+                width: 10px;
+                height: 20px;
+                bottom: 100%;
+                right: 0;
+                background-color: transparent;
+                border-bottom-right-radius: .5rem;
+                box-shadow: 0 1rem 0 white;
+            }
+            .active::after{
+                content: '';
+                position: absolute;
+                width: 10px;
+                height: 20px;
+                top: 100%;
+                right: 0;
+                background-color: transparent;
+                border-top-right-radius: .5rem;
+                box-shadow: 0 -1rem 0 white;
+            }
+        }
+       
+    }
+    .logo{
+        font-weight: 400;
+        font-size: 30px;
+    }
+    main{
+        background-color: white;
+        margin: 1rem;
+        margin-left: 0;
+        border-radius: 2rem;
+        padding: 30px;
+        .titulo-princpal{
+            color:rgb(138, 0, 156) ;
+        }
+        .contenedor-productos{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            width: 100%;
+            .producto{
+                
+                .producto-imagen{
+                    width: 150px;
+                    display: flex;
+                    text-align: center;
+                    height: 200px;
+                    margin-left: 50px;
+                    max-width: 100%;
+                    border-radius: 1rem;
+                    background-color: rgba(128, 128, 128, 0.075);
+                }
+                .producto-detalles{
+                    background-color:rgb(221, 0, 0) ;
+                    color: white;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    margin: 4px;
+                    padding: .5rem;
+                    height: 120px;
+                    text-align: center;
+                    align-items: center;
+                    border-radius: 5px;
+                    font-size: 15px;
+                    .producto-titulo{
+                        font-size: 15px;
+                    }
+                }
+                .producto-agregar{
+                    border: 0;
+                    background-color: white;
+                    color: black;
+                    padding: .5rem;
+                    text-transform: uppercase;
+                    border-radius: 20px;
+                    cursor: pointer;
+                    border: 2px solid white;
+                    transition: 0.2s;
+                    font-size: 15px;
+                }
+                .producto-agregar:hover{
+                    background-color:rgb(221, 0, 0);
+                    color: white;
+                }
+            }
+            
+        }
+    }
+}
