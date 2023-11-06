@@ -1,0 +1,63 @@
+[
+    {
+        "id": "bad-boy",
+        "titulo": "Perfume Bad Boy",
+        "imagen": "./multimedia/perfumes/perfumesHombres/bad-boy-100ml-removebg-preview.png",
+        "categoria": {
+            "nombre": "Perfumes Hombres",
+            "id": "perfumes-hombres"
+        },
+        "precio": 6300
+    },
+    {
+        "id": "hugo-boss",
+        "titulo": "Perfume Hugo Boss",
+        "imagen": "./multimedia/perfumes/perfumesHombres/hugo-boss-removebg-preview.png",
+        "categoria": {
+            "nombre": "Perfumes Hombres",
+            "id": "perfumes-hombres"
+        },
+        "precio": 6087
+    },
+    {
+        "id": "polo-black",
+        "titulo": "Perfume Polo Black",
+        "imagen": "./multimedia/perfumes/perfumesHombres/polo-black-125ml-removebg-preview.png",
+        "categoria": {
+            "nombre": "Perfumes Hombres",
+            "id": "perfumes-hombres"
+        },
+        "precio": 6400
+    },
+
+    {
+        "id": "212",
+        "titulo": "Perfume 212",
+        "imagen": "./multimedia/perfumes/perfumesMujer/212-carolinaHerrera-removebg-preview.png",
+        "categoria": {
+            "nombre": "Perfumes Mujeres",
+            "id": "perfumes-mujeres"
+        },
+        "precio": 3500
+    },
+    {
+        "id": "good-girl",
+        "titulo": "Perfume Good Girl",
+        "imagen": "./multimedia/perfumes/perfumesMujer/good-girl-removebg-preview.png",
+        "categoria": {
+            "nombre": "Perfumes Mujeres",
+            "id": "perfumes-mujeres"
+        },
+        "precio": 6000
+    },
+    {
+        "id": "my-way",
+        "titulo": "Perfume My Way",
+        "imagen": "./multimedia/perfumes/perfumesMujer/my-way-removebg-preview.png",
+        "categoria": {
+            "nombre": "Perfumes Mujeres",
+            "id": "perfumes-mujeres"
+        },
+        "precio": 3500
+    }
+]

@@ -1,68 +1,15 @@
-const productos = [
-    //PERFUMES HOMBRE
-    {
-        id: "bad-boy",
-        titulo: "Perfume Bad Boy",
-        imagen: "./multimedia/perfumes/perfumesHombres/bad-boy-100ml-removebg-preview.png",
-        categoria: {
-            nombre: "Perfumes Hombres",
-            id: "perfumes-hombres"
-        },
-        precio: 6300,
-    },
-    {
-        id: "hugo-boss",
-        titulo: "Perfume Hugo Boss",
-        imagen: "./multimedia/perfumes/perfumesHombres/hugo-boss-removebg-preview.png",
-        categoria: {
-            nombre: "Perfumes Hombres",
-            id: "perfumes-hombres"
-        },
-        precio: 6087,
-    },
-    {
-        id: "polo-black",
-        titulo: "Perfume Polo Black",
-        imagen: "./multimedia/perfumes/perfumesHombres/polo-black-125ml-removebg-preview.png",
-        categoria: {
-            nombre: "Perfumes Hombres",
-            id: "perfumes-hombres"
-        },
-        precio: 6400,
-    },
+let productos = [];
 
-    //PERFUMES MUJERES
-    {
-        id: "212",
-        titulo: "Perfume 212",
-        imagen: "./multimedia/perfumes/perfumesMujer/212-carolinaHerrera-removebg-preview.png",
-        categoria: {
-            nombre: "Perfumes Mujeres",
-            id: "perfumes-mujeres"
-        },
-        precio: 3500,
-    },
-    {
-        id: "good-girl",
-        titulo: "Perfume Good Girl",
-        imagen: "./multimedia/perfumes/perfumesMujer/good-girl-removebg-preview.png",
-        categoria: {
-            nombre: "Perfumes Mujeres",
-            id: "perfumes-mujeres"
-        },
-        precio: 6000,
-    },
-    {
-        id: "my-way",
-        titulo: "Perfume My Way",
-        imagen: "./multimedia/perfumes/perfumesMujer/my-way-removebg-preview.png",
-        categoria: {
-            nombre: "Perfumes Mujeres",
-            id: "perfumes-mujeres"
-        },
-        precio: 3500,
-    },
-];
+const productosFetch = async ()=>{
+   const productosF = await fetch("./js/productos.json")
+   .then(response => response.json())
+   .then(data => {
+       productos = data;
+       cargarProductos(productos);
+   })
+}
+
+productosFetch();
 
 const contenedorProductos = document.querySelector("#contenedor-productos")
 
@@ -85,7 +32,7 @@ function cargarProductos(productosElegidos) {
     });
     actualizarBotones();
 }
-cargarProductos(productos);
+
 
 const botonesCategorias = document.querySelectorAll(".boton-categoria");
 const tituloPrincipal = document.querySelector("#titulo-principal");
@@ -135,6 +82,23 @@ if (productoAlCarritoLS) {
 
 
 function agregarAlCarrito (e){
+    Toastify({
+        text: "Producto agregado",
+        duration: 3000,
+        destination: "./carrito.html",
+        newWindow: false,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "center", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "linear-gradient(to right, rgb(221, 0, 0), rgb(241, 138, 4))",
+          borderRadius: "50px",
+          textTransform: "uppercase",
+          fontSize: "15px",
+        },
+        onClick: function(){} // Callback after click
+      }).showToast();
     const idBoton = e.currentTarget.id
     const productoAgregado = productos.find(producto => producto.id === idBoton);
 
