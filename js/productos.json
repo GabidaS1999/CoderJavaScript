@@ -33,7 +33,7 @@
     {
         "id": "212",
         "titulo": "Perfume 212",
-        "imagen": "./multimedia/perfumes/perfumesMujer/212-carolinaHerrera-removebg-preview.png",
+        "imagen": "./multimedia/perfumes/PerfumesMujer/212-carolinaHerrera-removebg-preview.png",
         "categoria": {
             "nombre": "Perfumes Mujeres",
             "id": "perfumes-mujeres"
@@ -43,7 +43,7 @@
     {
         "id": "good-girl",
         "titulo": "Perfume Good Girl",
-        "imagen": "./multimedia/perfumes/perfumesMujer/good-girl-removebg-preview.png",
+        "imagen": "./multimedia/perfumes/PerfumesMujer/good-girl-removebg-preview.png",
         "categoria": {
             "nombre": "Perfumes Mujeres",
             "id": "perfumes-mujeres"
@@ -53,7 +53,7 @@
     {
         "id": "my-way",
         "titulo": "Perfume My Way",
-        "imagen": "./multimedia/perfumes/perfumesMujer/my-way-removebg-preview.png",
+        "imagen": "./multimedia/perfumes/PerfumesMujer/my-way-removebg-preview.png",
         "categoria": {
             "nombre": "Perfumes Mujeres",
             "id": "perfumes-mujeres"
